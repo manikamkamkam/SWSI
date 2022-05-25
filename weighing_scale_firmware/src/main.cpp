@@ -21,7 +21,7 @@
 const char* id = "gdWS1"; // Unique Scale ID
 const char* ssid = "!!!WIFI_ID!!!";
 const char* password = "!!!WIFI_PASSWORD!!!";
-const char* mqtt_server = "192.168.0.164";
+const char* mqtt_server = "192.168.0.163";
 
 // PWM output settings
 const int ledFreq = 5000;
@@ -101,7 +101,7 @@ void setup() {
   updatePage(0);
   setup_wifi();
   // Connect to Node-Red
-  client.setServer(mqtt_server, 1883);
+  client.setServer(mqtt_server, 1880);
   client.setCallback(callback);
   updatePage(3);
   reconnect();
